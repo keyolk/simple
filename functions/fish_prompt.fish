@@ -79,5 +79,20 @@ function fish_prompt -d "Simple Fish Prompt"
         end
     end
 
-    __print_color FF7676 "\e[K\n❯ "
+    printf "\e[K\n"
+    switch $fish_bind_mode
+    case default
+      set_color --bold red
+      printf 'N'
+    case insert
+      set_color --bold green green
+      printf 'I'
+    case visual
+      set_color --bold magenta
+      printf 'V'
+    end
+      set_color normal
+      printf ' '
+
+    __print_color FF7676 "❯ "
 end
