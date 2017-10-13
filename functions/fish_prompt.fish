@@ -92,7 +92,7 @@ function fish_prompt -d "Simple Fish Prompt"
       printf 'V'
     end
       set_color normal
-      printf ' '
+      printf ''
 
-    __print_color FF7676 "❯ "
+    __print_color FF7676 "》 "
 end
